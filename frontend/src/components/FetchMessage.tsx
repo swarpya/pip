@@ -6,7 +6,7 @@ export default function FetchPrediction() {
   const [result, setResult] = useState('');
   // Use an environment variable to determine the API endpoint
   const apiEndpoint =
-    process.env.NEXT_PUBLIC_API_URL;
+    process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/predict";
 
   useEffect(() => {
     fetch(apiEndpoint, {
